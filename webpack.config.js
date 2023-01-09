@@ -11,7 +11,14 @@ module.exports = {
     },
     plugins: [
         new HtmlWebpackPlugin({
-            title: 'Output Management',
+            title: 'Food-on-a-plate',
+            templateContent: `
+            <html>
+              <body>
+                <div id="content"></div>
+              </body>
+            </html>
+          `
         }),
     ],
     output: {
