@@ -2,6 +2,7 @@ import _ from 'lodash';
 import './style.css';
 import Img from './chef.png';
 
+
 function Header() {
     // create html element and insert text to the element
     function createHtmlElement(elementType, text) {
