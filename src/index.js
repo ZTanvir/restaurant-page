@@ -26,6 +26,10 @@ function Header() {
         ulEl.appendChild(liEl);
     }
 
+    // Add class
+    divEl.classList.add("home", "header");
+
+    // insert element inside to parent header element
     divEl.appendChild(h1El);
     navEl.appendChild(ulEl);
     divEl.appendChild(navEl);
@@ -48,6 +52,9 @@ function HeroSection() {
     const pVisit = createHtmlElement("p", "Order online or visit us!");
 
     chefImg.src = Img;
+    // Add class
+    heroDiv.classList.add("home", "section");
+
 
     //Inset element to div in hero section
     heroDiv.appendChild(pBestPizza);
@@ -69,11 +76,16 @@ function Footer() {
     const footerDiv = createHtmlElement("footer", "");
     const fText = createHtmlElement("p", "Copyright © 2022 Zahirul");
 
+    // Add class
+    footerDiv.classList.add("home", "footer");
+
     footerDiv.appendChild(fText);
 
     return footerDiv;
 }
 
-document.body.appendChild(Header());
-document.body.appendChild(HeroSection());
-document.body.appendChild(Footer());
+const contentEl = document.getElementById("content");
+contentEl.appendChild(Header());
+contentEl.appendChild(HeroSection());
+contentEl.appendChild(Footer());
+
