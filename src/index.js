@@ -2,14 +2,6 @@ import _ from 'lodash';
 import './style.css';
 import Img from './chef.png';
 
-function component() {
-    const element = document.createElement("div");
-
-    // Lodash, now imported by this script
-    const head1 = document.getElementById("content");
-    console.log(head1);
-    return element;
-}
 function nav() {
     // create html element and insert text to the element
     function createHtmlElement(elementType, text) {
@@ -66,7 +58,6 @@ function hero() {
     return heroDiv;
 }
 
-// document.body.appendChild(component());
 document.body.appendChild(nav());
 document.body.appendChild(hero());
 
