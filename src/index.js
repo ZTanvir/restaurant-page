@@ -2,17 +2,15 @@ import _ from 'lodash';
 import './style.css';
 import Img from './chef.png';
 
-
-function Header() {
-    // create html element and insert text to the element
-    function createHtmlElement(elementType, text) {
-        const element = document.createElement(elementType);
-        if (text != "") {
-            element.textContent = text;
-        }
-        return element;
+// create html element and insert text to the element
+function createHtmlElement(elementType, text) {
+    const element = document.createElement(elementType);
+    if (text != "") {
+        element.textContent = text;
     }
-
+    return element;
+}
+function Header() {
     const divEl = createHtmlElement("header", "");
     const h1El = createHtmlElement("h1", "Crostata");
     const navEl = createHtmlElement("nav", "");
@@ -38,14 +36,6 @@ function Header() {
     return divEl;
 }
 function HeroSection() {
-    // create html element and insert text to the element
-    function createHtmlElement(elementType, text) {
-        const element = document.createElement(elementType);
-        if (text != "") {
-            element.textContent = text;
-        }
-        return element;
-    }
     const heroDiv = createHtmlElement("section");
     const pBestPizza = createHtmlElement("p", "Best pizza in your country");
     const pBorn = createHtmlElement("p", "Made with passion since 1908");
@@ -66,14 +56,6 @@ function HeroSection() {
     return heroDiv;
 }
 function Footer() {
-    function createHtmlElement(elementType, text) {
-        const element = document.createElement(elementType);
-        if (text != "") {
-            element.textContent = text;
-        }
-        return element;
-    }
-
     const footerDiv = createHtmlElement("footer", "");
     const fText = createHtmlElement("p", "Copyright © 2022 Zahirul");
 
