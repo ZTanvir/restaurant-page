@@ -3,7 +3,10 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
   mode: "development",
-  entry: "./src/index.js",
+  entry: {
+    index: "./src/index.js",
+    menu: "./src/menu.js"
+  },
   devtool: "inline-source-map",
   devServer: {
     static: "./dist",
@@ -23,7 +26,15 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       title: "Food Resturant",
-      template: "src/template.html",
+      template: "src/home.html",
+      chunks: ['index'],
+      filename: "home.html"
+    }),
+    new HtmlWebpackPlugin({
+      template: './src/menu.html',
+      title: 'Menu Page',
+      chunks: ['menu'],
+      filename: 'menu.html'
     }),
   ],
   output: {

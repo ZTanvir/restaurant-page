@@ -17,10 +17,11 @@ function Header() {
     const ulEl = createHtmlElement("ul", "");
 
     const navText = ["Home", "Menu", "Content"];
+    const pageUrl = ["./index.html", "./menu.html", "./index.html"]
     for (let i = 0; i < 3; i++) {
         const liEl = createHtmlElement("li", "");
         const link = createHtmlElement("a", navText[i]);
-        link.href = "#";
+        link.href = pageUrl[i];
         liEl.appendChild(link);
         ulEl.appendChild(liEl);
     }
