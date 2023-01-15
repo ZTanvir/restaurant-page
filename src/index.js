@@ -17,12 +17,9 @@ function Header() {
     const ulEl = createHtmlElement("ul", "");
 
     const navText = ["Home", "Menu", "Content"];
-    const pageUrl = ["./home.html", "./menu.html", "./index.html"]
     for (let i = 0; i < 3; i++) {
-        const liEl = createHtmlElement("li", "");
-        const link = createHtmlElement("a", navText[i]);
-        link.href = pageUrl[i];
-        liEl.appendChild(link);
+        const liEl = createHtmlElement("li", navText[i]);
+        liEl.classList.add(navText[i].toLowerCase());
         ulEl.appendChild(liEl);
     }
 
@@ -67,24 +64,35 @@ function Footer() {
 
     return footerDiv;
 }
+function MenuSection() {
+
+    const card = (img, header2, para) => {
+        const divEl = document.createElement("div");
+        const pizzaImg = document.createElement("img");
+        pizzaImg.src = img;
+        const pizzaName = document.createElement("h2");
+        pizzaName.textContent = header2;
+        const pizzaDetails = document.createElement("p");
+        pizzaDetails.textContent = para;
+
+        divEl.appendChild(pizzaImg);
+        divEl.appendChild(pizzaName);
+        divEl.appendChild(pizzaDetails);
+
+        return divEl;
+    }
+    // const salsiccia = card(Img, "salsiccia", "Tomato sauce, Mozarella, Tomato, Homemade sausage, Garlic, Basil")
+
+    // const divE = document.createElement("div");
+    // divE.appendChild(salsiccia);
+    // return divE
+}
 
 const contentEl = document.getElementById("content");
 contentEl.appendChild(Header());
 contentEl.appendChild(HeroSection());
+// contentEl.appendChild(MenuSection());
 contentEl.appendChild(Footer());
 
-class Foo {
-    constructor() {
-        this.value = "foobar"
-    }
-    static instance() {
-        return new Foo()
-    }
-    getValue() {
-        return this.value
-    }
-}
 
-console.log(Foo.instance().getValue())
 
-// export { createHtmlElement, Header };
