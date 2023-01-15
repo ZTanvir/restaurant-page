@@ -17,7 +17,7 @@ function Header() {
     const ulEl = createHtmlElement("ul", "");
 
     const navText = ["Home", "Menu", "Content"];
-    const pageUrl = ["./index.html", "./menu.html", "./index.html"]
+    const pageUrl = ["./home.html", "./menu.html", "./index.html"]
     for (let i = 0; i < 3; i++) {
         const liEl = createHtmlElement("li", "");
         const link = createHtmlElement("a", navText[i]);
@@ -73,3 +73,18 @@ contentEl.appendChild(Header());
 contentEl.appendChild(HeroSection());
 contentEl.appendChild(Footer());
 
+class Foo {
+    constructor() {
+        this.value = "foobar"
+    }
+    static instance() {
+        return new Foo()
+    }
+    getValue() {
+        return this.value
+    }
+}
+
+console.log(Foo.instance().getValue())
+
+// export { createHtmlElement, Header };
