@@ -68,6 +68,7 @@ function MenuSection() {
 
     const card = (img, header2, para) => {
         const divEl = document.createElement("div");
+        divEl.classList.add("card");
         const pizzaImg = document.createElement("img");
         pizzaImg.src = img;
         const pizzaName = document.createElement("h2");
@@ -81,17 +82,18 @@ function MenuSection() {
 
         return divEl;
     }
-    // const salsiccia = card(Img, "salsiccia", "Tomato sauce, Mozarella, Tomato, Homemade sausage, Garlic, Basil")
+    const salsiccia = card(Img, "salsiccia", "Tomato sauce, Mozarella, Tomato, Homemade sausage, Garlic, Basil")
 
-    // const divE = document.createElement("div");
-    // divE.appendChild(salsiccia);
-    // return divE
+    const menuList = document.createElement("div");
+    menuList.classList.add("menu-list");
+    menuList.appendChild(salsiccia);
+    return menuList;
 }
 
 const contentEl = document.getElementById("content");
 contentEl.appendChild(Header());
 contentEl.appendChild(HeroSection());
-// contentEl.appendChild(MenuSection());
+contentEl.appendChild(MenuSection());
 contentEl.appendChild(Footer());
 
 
