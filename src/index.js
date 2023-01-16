@@ -64,25 +64,26 @@ function Footer() {
 
     return footerDiv;
 }
+function card(img, header2, para) {
+    const divEl = document.createElement("div");
+    divEl.classList.add("card");
+    const pizzaImg = document.createElement("img");
+    pizzaImg.src = img;
+    const pizzaName = document.createElement("h2");
+    pizzaName.textContent = header2;
+    const pizzaDetails = document.createElement("p");
+    pizzaDetails.textContent = para;
+
+    divEl.appendChild(pizzaImg);
+    divEl.appendChild(pizzaName);
+    divEl.appendChild(pizzaDetails);
+
+    return divEl;
+}
+
 function MenuSection() {
 
-    const card = (img, header2, para) => {
-        const divEl = document.createElement("div");
-        divEl.classList.add("card");
-        const pizzaImg = document.createElement("img");
-        pizzaImg.src = img;
-        const pizzaName = document.createElement("h2");
-        pizzaName.textContent = header2;
-        const pizzaDetails = document.createElement("p");
-        pizzaDetails.textContent = para;
-
-        divEl.appendChild(pizzaImg);
-        divEl.appendChild(pizzaName);
-        divEl.appendChild(pizzaDetails);
-
-        return divEl;
-    }
-    const salsiccia = card(Img, "salsiccia", "Tomato sauce, Mozarella, Tomato, Homemade sausage, Garlic, Basil");
+    const salsiccia = card(Img, "Salsiccia", "Tomato sauce, Mozarella, Tomato, Homemade sausage, Garlic, Basil");
     const gamberi = card(Img, "Gamberi", "Tomato sauce, Mozarella, Shrimps, Feta cheese, Olives, Basil");
     const pepe = card(Img, "Pepe", "Tomato sauce, Mozarella, Chilli flakes, Olives, Basil");
     const disgustoso = card(Img, "Disgustoso", "Tomato sauce, Bacon, Pineapple, Olives, Basil");
@@ -90,9 +91,6 @@ function MenuSection() {
     const pomodoro = card(Img, "Pomodoro", "Tomato sauce, Mozarella, Tomato, Onion, Feta cheese, Chilli");
     const crema = card(Img, "Crema", "White sauce, Mozarella, Shrimps, Salmon, Pineapple, Olives, Basil");
     const carne = card(Img, "carne", "Tomato sauce, Mozarella, Homemade sausage, Bacon, Garlic, Pepper, Chilli");
-
-
-
 
     const menuList = document.createElement("div");
     menuList.classList.add("menu-list");
