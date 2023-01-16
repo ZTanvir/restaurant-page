@@ -82,11 +82,29 @@ function MenuSection() {
 
         return divEl;
     }
-    const salsiccia = card(Img, "salsiccia", "Tomato sauce, Mozarella, Tomato, Homemade sausage, Garlic, Basil")
+    const salsiccia = card(Img, "salsiccia", "Tomato sauce, Mozarella, Tomato, Homemade sausage, Garlic, Basil");
+    const gamberi = card(Img, "Gamberi", "Tomato sauce, Mozarella, Shrimps, Feta cheese, Olives, Basil");
+    const pepe = card(Img, "Pepe", "Tomato sauce, Mozarella, Chilli flakes, Olives, Basil");
+    const disgustoso = card(Img, "Disgustoso", "Tomato sauce, Bacon, Pineapple, Olives, Basil");
+    const colorato = card(Img, "Colorato", "Tomato sauce, Mozarella, Onion, Pepper, Champignons, Basil");
+    const pomodoro = card(Img, "Pomodoro", "Tomato sauce, Mozarella, Tomato, Onion, Feta cheese, Chilli");
+    const crema = card(Img, "Crema", "White sauce, Mozarella, Shrimps, Salmon, Pineapple, Olives, Basil");
+    const carne = card(Img, "carne", "Tomato sauce, Mozarella, Homemade sausage, Bacon, Garlic, Pepper, Chilli");
+
+
+
 
     const menuList = document.createElement("div");
     menuList.classList.add("menu-list");
     menuList.appendChild(salsiccia);
+    menuList.appendChild(gamberi);
+    menuList.appendChild(pepe);
+    menuList.appendChild(disgustoso);
+    menuList.appendChild(colorato);
+    menuList.appendChild(pomodoro);
+    menuList.appendChild(crema);
+    menuList.appendChild(carne);
+
     return menuList;
 }
 
