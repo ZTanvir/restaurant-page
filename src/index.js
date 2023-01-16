@@ -69,10 +69,8 @@ function card(img, header2, para) {
     divEl.classList.add("card");
     const pizzaImg = document.createElement("img");
     pizzaImg.src = img;
-    const pizzaName = document.createElement("h2");
-    pizzaName.textContent = header2;
-    const pizzaDetails = document.createElement("p");
-    pizzaDetails.textContent = para;
+    const pizzaName = createHtmlElement("h2", header2);
+    const pizzaDetails = createHtmlElement("p", para);
 
     divEl.appendChild(pizzaImg);
     divEl.appendChild(pizzaName);
