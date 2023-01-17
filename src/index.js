@@ -16,7 +16,7 @@ function Header() {
     const navEl = createHtmlElement("nav", "");
     const ulEl = createHtmlElement("ul", "");
 
-    const navText = ["Home", "Menu", "Content"];
+    const navText = ["Home", "Menu", "Contact"];
     for (let i = 0; i < 3; i++) {
         const liEl = createHtmlElement("li", navText[i]);
         liEl.classList.add(navText[i].toLowerCase());
@@ -78,7 +78,6 @@ function card(img, header2, para) {
 
     return divEl;
 }
-
 function MenuSection() {
 
     const salsiccia = card(Img, "Salsiccia", "Tomato sauce, Mozarella, Tomato, Homemade sausage, Garlic, Basil");
@@ -103,11 +102,29 @@ function MenuSection() {
 
     return menuList;
 }
+function ContactSection() {
+    const divEl = createHtmlElement("div", "");
+    divEl.classList.add("contact");
+    const mobileNumber = createHtmlElement("p", "📞 123 456 789")
+    mobileNumber.classList.add("mobile-number");
+    const address = createHtmlElement("p", "🏠 Hollywood Boulevard 42, Los Angeles, USA")
+    address.classList.add("address")
+    const locationImg = createHtmlElement("img", "");
+    locationImg.src = Img;
+    locationImg.classList.add("location-img")
+
+    divEl.appendChild(mobileNumber);
+    divEl.appendChild(address);
+    divEl.appendChild(locationImg);
+
+    return divEl;
+}
 
 const contentEl = document.getElementById("content");
 contentEl.appendChild(Header());
 contentEl.appendChild(HeroSection());
 contentEl.appendChild(MenuSection());
+contentEl.appendChild(ContactSection());
 contentEl.appendChild(Footer());
 
 
