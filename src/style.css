@@ -96,3 +96,19 @@ body {
 .menu-list .card p {
   color: var(--color-lightash, lightgrey);
 }
+/* Contact */
+.contact {
+  max-width: 600px;
+  background-color: var(--color-light-black);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 30px;
+  margin: 0 auto;
+}
+.contact p {
+  color: var(--color-white);
+}
+.contact img {
+  width: 50%;
+}
