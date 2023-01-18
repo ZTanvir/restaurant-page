@@ -130,6 +130,8 @@ function ContactSection() {
     return divEl;
 }
 
+// Render page content based on page
+
 const contentEl = document.getElementById("content");
 contentEl.appendChild(Header());
 contentEl.appendChild(HeroSection());
