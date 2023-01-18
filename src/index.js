@@ -2,14 +2,14 @@ import _ from 'lodash';
 import './style.css';
 import Img from './images/chef.png';
 import locationIm from "./images/restaurant-location.png";
-import salsicciaImg from "./pizza-types/salsiccia.png";
-import gamberiImg from "./pizza-types/gamberi.png";
-import pepeImg from "./pizza-types/pepe.png";
-import disgustosoImg from "./pizza-types/disgustoso.png";
-import coloratoImg from "./pizza-types/colorato.png";
-import pomodoroImg from "./pizza-types/pomodoro.png";
-import cremaImg from "./pizza-types/crema.png";
-import carneImg from "./pizza-types/carne.png";
+import salsicciaImg from "./images/pizza-types/salsiccia.png";
+import gamberiImg from "./images/pizza-types/gamberi.png";
+import pepeImg from "./images/pizza-types/pepe.png";
+import disgustosoImg from "./images/pizza-types/disgustoso.png";
+import coloratoImg from "./images/pizza-types/colorato.png";
+import pomodoroImg from "./images/pizza-types/pomodoro.png";
+import cremaImg from "./images/pizza-types/crema.png";
+import carneImg from "./images/pizza-types/carne.png";
 
 
 // create html element and insert text to the element
