@@ -97,7 +97,7 @@ body {
   color: var(--color-lightash, lightgrey);
 }
 /* Contact */
-.contact {
+.contact-section {
   max-width: 600px;
   background-color: var(--color-light-black);
   display: flex;
@@ -106,9 +106,9 @@ body {
   padding: 30px;
   margin: 0 auto;
 }
-.contact p {
+.contact-section p {
   color: var(--color-white);
 }
-.contact img {
+.contact-section img {
   width: 50%;
 }

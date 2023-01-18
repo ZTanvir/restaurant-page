@@ -104,7 +104,7 @@ function MenuSection() {
 }
 function ContactSection() {
     const divEl = createHtmlElement("div", "");
-    divEl.classList.add("contact");
+    divEl.classList.add("contact-section");
     const mobileNumber = createHtmlElement("p", "📞 123 456 789")
     mobileNumber.classList.add("mobile-number");
     const address = createHtmlElement("p", "🏠 Hollywood Boulevard 42, Los Angeles, USA")
