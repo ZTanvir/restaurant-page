@@ -1,6 +1,16 @@
 import _ from 'lodash';
 import './style.css';
-import Img from './chef.png';
+import Img from './images/chef.png';
+import locationIm from "./images/restaurant-location.png";
+import salsicciaImg from "./pizza-types/salsiccia.png";
+import gamberiImg from "./pizza-types/gamberi.png";
+import pepeImg from "./pizza-types/pepe.png";
+import disgustosoImg from "./pizza-types/disgustoso.png";
+import coloratoImg from "./pizza-types/colorato.png";
+import pomodoroImg from "./pizza-types/pomodoro.png";
+import cremaImg from "./pizza-types/crema.png";
+import carneImg from "./pizza-types/carne.png";
+
 
 // create html element and insert text to the element
 function createHtmlElement(elementType, text) {
@@ -80,14 +90,14 @@ function card(img, header2, para) {
 }
 function MenuSection() {
 
-    const salsiccia = card(Img, "Salsiccia", "Tomato sauce, Mozarella, Tomato, Homemade sausage, Garlic, Basil");
-    const gamberi = card(Img, "Gamberi", "Tomato sauce, Mozarella, Shrimps, Feta cheese, Olives, Basil");
-    const pepe = card(Img, "Pepe", "Tomato sauce, Mozarella, Chilli flakes, Olives, Basil");
-    const disgustoso = card(Img, "Disgustoso", "Tomato sauce, Bacon, Pineapple, Olives, Basil");
-    const colorato = card(Img, "Colorato", "Tomato sauce, Mozarella, Onion, Pepper, Champignons, Basil");
-    const pomodoro = card(Img, "Pomodoro", "Tomato sauce, Mozarella, Tomato, Onion, Feta cheese, Chilli");
-    const crema = card(Img, "Crema", "White sauce, Mozarella, Shrimps, Salmon, Pineapple, Olives, Basil");
-    const carne = card(Img, "carne", "Tomato sauce, Mozarella, Homemade sausage, Bacon, Garlic, Pepper, Chilli");
+    const salsiccia = card(salsicciaImg, "Salsiccia", "Tomato sauce, Mozarella, Tomato, Homemade sausage, Garlic, Basil");
+    const gamberi = card(gamberiImg, "Gamberi", "Tomato sauce, Mozarella, Shrimps, Feta cheese, Olives, Basil");
+    const pepe = card(pepeImg, "Pepe", "Tomato sauce, Mozarella, Chilli flakes, Olives, Basil");
+    const disgustoso = card(disgustosoImg, "Disgustoso", "Tomato sauce, Bacon, Pineapple, Olives, Basil");
+    const colorato = card(coloratoImg, "Colorato", "Tomato sauce, Mozarella, Onion, Pepper, Champignons, Basil");
+    const pomodoro = card(pomodoroImg, "Pomodoro", "Tomato sauce, Mozarella, Tomato, Onion, Feta cheese, Chilli");
+    const crema = card(cremaImg, "Crema", "White sauce, Mozarella, Shrimps, Salmon, Pineapple, Olives, Basil");
+    const carne = card(carneImg, "carne", "Tomato sauce, Mozarella, Homemade sausage, Bacon, Garlic, Pepper, Chilli");
 
     const menuList = document.createElement("div");
     menuList.classList.add("menu-list");
@@ -110,7 +120,7 @@ function ContactSection() {
     const address = createHtmlElement("p", "🏠 Hollywood Boulevard 42, Los Angeles, USA")
     address.classList.add("address")
     const locationImg = createHtmlElement("img", "");
-    locationImg.src = Img;
+    locationImg.src = locationIm;
     locationImg.classList.add("location-img")
 
     divEl.appendChild(mobileNumber);
