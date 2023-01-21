@@ -136,7 +136,6 @@ function ContactSection() {
 const contentEl = document.getElementById("content");
 contentEl.appendChild(Header());
 contentEl.appendChild(HeroSection());
-
 contentEl.appendChild(Footer());
 
 // Content Element
@@ -147,6 +146,9 @@ const footerEl = document.querySelector(".footer");
 const homeEl = document.querySelector(".homenav");
 const menuEl = document.querySelector(".menunav");
 const contactEl = document.querySelector(".contactnav");
+
+// To add border bottom
+homeEl.classList.add("active");
 
 // Remove unnecessary elements
 function removeChildElement() {
@@ -162,15 +164,25 @@ homeEl.addEventListener("click", () => {
     removeChildElement();
     contentEl.insertBefore(HeroSection(), footerEl);
     contentEl.style.height = "100%";
-    console.log();
+    homeEl.classList.remove("active");
+    menuEl.classList.remove("active");
+    contactEl.classList.remove("active");
+    homeEl.classList.add("active");
+
 })
 menuEl.addEventListener("click", () => {
     removeChildElement();
     contentEl.insertBefore(MenuSection(), footerEl);
     contentEl.style.height = "200%";
+    homeEl.classList.remove("active");
+    menuEl.classList.add("active");
+    contactEl.classList.remove("active");
 })
 contactEl.addEventListener("click", () => {
     removeChildElement();
     contentEl.insertBefore(ContactSection(), footerEl);
     contentEl.style.height = "100%";
+    homeEl.classList.remove("active");
+    menuEl.classList.remove("active");
+    contactEl.classList.add("active");
 })
