@@ -135,15 +135,12 @@ function ContactSection() {
 
 const contentEl = document.getElementById("content");
 contentEl.appendChild(Header());
-// contentEl.appendChild(HeroSection());
-// contentEl.appendChild(MenuSection());
-// contentEl.appendChild(ContactSection());
+contentEl.appendChild(HeroSection());
+
 contentEl.appendChild(Footer());
 
 // Content Element
-// const heroSectionEl = document.querySelector(".section");
-// const menuSectionEl = document.querySelector(".menu-list");
-// const contactSectionEl = document.querySelector(".contact-section");
+
 const footerEl = document.querySelector(".footer");
 
 // Navigation menu element
@@ -151,13 +148,25 @@ const homeEl = document.querySelector(".homenav");
 const menuEl = document.querySelector(".menunav");
 const contactEl = document.querySelector(".contactnav");
 
+// Remove unnecessary elements
+function removeChildElement() {
+    const heroSectionEl = document.querySelector(".section");
+    const menuSectionEl = document.querySelector(".menu-list");
+    const contactSectionEl = document.querySelector(".contact-section");
+    if (heroSectionEl != null) { heroSectionEl.remove() };
+    if (menuSectionEl != null) { menuSectionEl.remove() };
+    if (contactSectionEl != null) { contactSectionEl.remove() };
+}
+
 homeEl.addEventListener("click", () => {
+    removeChildElement();
     contentEl.insertBefore(HeroSection(), footerEl);
 })
 menuEl.addEventListener("click", () => {
+    removeChildElement();
     contentEl.insertBefore(MenuSection(), footerEl);
 })
 contactEl.addEventListener("click", () => {
-    contentEl.appendChild(ContactSection(), footerEl);
-
+    removeChildElement();
+    contentEl.insertBefore(ContactSection(), footerEl);
 })
