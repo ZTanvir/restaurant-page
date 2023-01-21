@@ -32,7 +32,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       title: "Food Resturant",
       template: "src/index.html",
-      filename: "index.html"
+      filename: "index.html",
     }),
   ],
   output: {

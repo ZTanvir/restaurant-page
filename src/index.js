@@ -161,12 +161,16 @@ function removeChildElement() {
 homeEl.addEventListener("click", () => {
     removeChildElement();
     contentEl.insertBefore(HeroSection(), footerEl);
+    contentEl.style.height = "100%";
+    console.log();
 })
 menuEl.addEventListener("click", () => {
     removeChildElement();
     contentEl.insertBefore(MenuSection(), footerEl);
+    contentEl.style.height = "200%";
 })
 contactEl.addEventListener("click", () => {
     removeChildElement();
     contentEl.insertBefore(ContactSection(), footerEl);
+    contentEl.style.height = "100%";
 })
