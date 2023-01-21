@@ -29,7 +29,7 @@ function Header() {
     const navText = ["Home", "Menu", "Contact"];
     for (let i = 0; i < 3; i++) {
         const liEl = createHtmlElement("li", navText[i]);
-        liEl.classList.add(navText[i].toLowerCase());
+        liEl.classList.add(navText[i].toLowerCase() + "nav");
         ulEl.appendChild(liEl);
     }
 
@@ -132,12 +132,32 @@ function ContactSection() {
 
 // Render page content based on page
 
+
 const contentEl = document.getElementById("content");
 contentEl.appendChild(Header());
-contentEl.appendChild(HeroSection());
-contentEl.appendChild(MenuSection());
-contentEl.appendChild(ContactSection());
+// contentEl.appendChild(HeroSection());
+// contentEl.appendChild(MenuSection());
+// contentEl.appendChild(ContactSection());
 contentEl.appendChild(Footer());
 
+// Content Element
+// const heroSectionEl = document.querySelector(".section");
+// const menuSectionEl = document.querySelector(".menu-list");
+// const contactSectionEl = document.querySelector(".contact-section");
+const footerEl = document.querySelector(".footer");
 
+// Navigation menu element
+const homeEl = document.querySelector(".homenav");
+const menuEl = document.querySelector(".menunav");
+const contactEl = document.querySelector(".contactnav");
 
+homeEl.addEventListener("click", () => {
+    contentEl.insertBefore(HeroSection(), footerEl);
+})
+menuEl.addEventListener("click", () => {
+    contentEl.insertBefore(MenuSection(), footerEl);
+})
+contactEl.addEventListener("click", () => {
+    contentEl.appendChild(ContactSection(), footerEl);
+
+})
