@@ -11,38 +11,39 @@ import pomodoroImg from "./images/pizza-types/pomodoro.png";
 import cremaImg from "./images/pizza-types/crema.png";
 import carneImg from "./images/pizza-types/carne.png";
 
+import { Header, createHtmlElement } from './header.js';
 
 // create html element and insert text to the element
-function createHtmlElement(elementType, text) {
-    const element = document.createElement(elementType);
-    if (text != "") {
-        element.textContent = text;
-    }
-    return element;
-}
-function Header() {
-    const divEl = createHtmlElement("header", "");
-    const h1El = createHtmlElement("h1", "Crostata");
-    const navEl = createHtmlElement("nav", "");
-    const ulEl = createHtmlElement("ul", "");
+// function createHtmlElement(elementType, text) {
+//     const element = document.createElement(elementType);
+//     if (text != "") {
+//         element.textContent = text;
+//     }
+//     return element;
+// }
+// function Header() {
+//     const divEl = createHtmlElement("header", "");
+//     const h1El = createHtmlElement("h1", "Crostata");
+//     const navEl = createHtmlElement("nav", "");
+//     const ulEl = createHtmlElement("ul", "");
 
-    const navText = ["Home", "Menu", "Contact"];
-    for (let i = 0; i < 3; i++) {
-        const liEl = createHtmlElement("li", navText[i]);
-        liEl.classList.add(navText[i].toLowerCase() + "nav");
-        ulEl.appendChild(liEl);
-    }
+//     const navText = ["Home", "Menu", "Contact"];
+//     for (let i = 0; i < 3; i++) {
+//         const liEl = createHtmlElement("li", navText[i]);
+//         liEl.classList.add(navText[i].toLowerCase() + "nav");
+//         ulEl.appendChild(liEl);
+//     }
 
-    // Add class
-    divEl.classList.add("home", "header");
+//     // Add class
+//     divEl.classList.add("home", "header");
 
-    // insert element inside to parent header element
-    divEl.appendChild(h1El);
-    navEl.appendChild(ulEl);
-    divEl.appendChild(navEl);
+//     // insert element inside to parent header element
+//     divEl.appendChild(h1El);
+//     navEl.appendChild(ulEl);
+//     divEl.appendChild(navEl);
 
-    return divEl;
-}
+//     return divEl;
+// }
 function HeroSection() {
     const heroDiv = createHtmlElement("section");
     const pBestPizza = createHtmlElement("p", "Best pizza in your country");
