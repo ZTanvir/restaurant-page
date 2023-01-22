@@ -1,6 +1,5 @@
 import _ from 'lodash';
 import './style.css';
-import Img from './images/chef.png';
 import locationIm from "./images/restaurant-location.png";
 import salsicciaImg from "./images/pizza-types/salsiccia.png";
 import gamberiImg from "./images/pizza-types/gamberi.png";
@@ -12,6 +11,7 @@ import cremaImg from "./images/pizza-types/crema.png";
 import carneImg from "./images/pizza-types/carne.png";
 
 import { Header, createHtmlElement } from './header.js';
+import { HeroSection } from './hero.js';
 
 // create html element and insert text to the element
 // function createHtmlElement(elementType, text) {
@@ -44,26 +44,26 @@ import { Header, createHtmlElement } from './header.js';
 
 //     return divEl;
 // }
-function HeroSection() {
-    const heroDiv = createHtmlElement("section");
-    const pBestPizza = createHtmlElement("p", "Best pizza in your country");
-    const pBorn = createHtmlElement("p", "Made with passion since 1908");
-    const chefImg = createHtmlElement("img");
-    const pVisit = createHtmlElement("p", "Order online or visit us!");
+// function HeroSection() {
+//     const heroDiv = createHtmlElement("section");
+//     const pBestPizza = createHtmlElement("p", "Best pizza in your country");
+//     const pBorn = createHtmlElement("p", "Made with passion since 1908");
+//     const chefImg = createHtmlElement("img");
+//     const pVisit = createHtmlElement("p", "Order online or visit us!");
 
-    chefImg.src = Img;
-    // Add class
-    heroDiv.classList.add("home", "section");
+//     chefImg.src = Img;
+//     // Add class
+//     heroDiv.classList.add("home", "section");
 
 
-    //Inset element to div in hero section
-    heroDiv.appendChild(pBestPizza);
-    heroDiv.appendChild(pBorn);
-    heroDiv.appendChild(chefImg);
-    heroDiv.appendChild(pVisit);
+//     //Inset element to div in hero section
+//     heroDiv.appendChild(pBestPizza);
+//     heroDiv.appendChild(pBorn);
+//     heroDiv.appendChild(chefImg);
+//     heroDiv.appendChild(pVisit);
 
-    return heroDiv;
-}
+//     return heroDiv;
+// }
 function Footer() {
     const footerDiv = createHtmlElement("footer", "");
     const fText = createHtmlElement("p", "Copyright © 2022 Zahirul");

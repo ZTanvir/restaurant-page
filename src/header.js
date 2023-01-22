@@ -28,4 +28,4 @@ function Header() {
 
     return divEl;
 }
-export { createHtmlElement, Header }
+export { createHtmlElement, Header };
