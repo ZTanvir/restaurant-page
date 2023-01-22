@@ -12,107 +12,11 @@ import carneImg from "./images/pizza-types/carne.png";
 
 import { Header, createHtmlElement } from './header.js';
 import { HeroSection } from './hero.js';
-
-// create html element and insert text to the element
-// function createHtmlElement(elementType, text) {
-//     const element = document.createElement(elementType);
-//     if (text != "") {
-//         element.textContent = text;
-//     }
-//     return element;
-// }
-// function Header() {
-//     const divEl = createHtmlElement("header", "");
-//     const h1El = createHtmlElement("h1", "Crostata");
-//     const navEl = createHtmlElement("nav", "");
-//     const ulEl = createHtmlElement("ul", "");
-
-//     const navText = ["Home", "Menu", "Contact"];
-//     for (let i = 0; i < 3; i++) {
-//         const liEl = createHtmlElement("li", navText[i]);
-//         liEl.classList.add(navText[i].toLowerCase() + "nav");
-//         ulEl.appendChild(liEl);
-//     }
-
-//     // Add class
-//     divEl.classList.add("home", "header");
-
-//     // insert element inside to parent header element
-//     divEl.appendChild(h1El);
-//     navEl.appendChild(ulEl);
-//     divEl.appendChild(navEl);
-
-//     return divEl;
-// }
-// function HeroSection() {
-//     const heroDiv = createHtmlElement("section");
-//     const pBestPizza = createHtmlElement("p", "Best pizza in your country");
-//     const pBorn = createHtmlElement("p", "Made with passion since 1908");
-//     const chefImg = createHtmlElement("img");
-//     const pVisit = createHtmlElement("p", "Order online or visit us!");
-
-//     chefImg.src = Img;
-//     // Add class
-//     heroDiv.classList.add("home", "section");
+import { Footer } from './footer.js';
+import { MenuSection } from './menu.js';
 
 
-//     //Inset element to div in hero section
-//     heroDiv.appendChild(pBestPizza);
-//     heroDiv.appendChild(pBorn);
-//     heroDiv.appendChild(chefImg);
-//     heroDiv.appendChild(pVisit);
 
-//     return heroDiv;
-// }
-function Footer() {
-    const footerDiv = createHtmlElement("footer", "");
-    const fText = createHtmlElement("p", "Copyright © 2022 Zahirul");
-
-    // Add class
-    footerDiv.classList.add("home", "footer");
-
-    footerDiv.appendChild(fText);
-
-    return footerDiv;
-}
-function card(img, header2, para) {
-    const divEl = document.createElement("div");
-    divEl.classList.add("card");
-    const pizzaImg = document.createElement("img");
-    pizzaImg.src = img;
-    const pizzaName = createHtmlElement("h2", header2);
-    const pizzaDetails = createHtmlElement("p", para);
-
-    divEl.appendChild(pizzaImg);
-    divEl.appendChild(pizzaName);
-    divEl.appendChild(pizzaDetails);
-
-    return divEl;
-}
-function MenuSection() {
-
-    const salsiccia = card(salsicciaImg, "Salsiccia", "Tomato sauce, Mozarella, Tomato, Homemade sausage, Garlic, Basil");
-    const gamberi = card(gamberiImg, "Gamberi", "Tomato sauce, Mozarella, Shrimps, Feta cheese, Olives, Basil");
-    const pepe = card(pepeImg, "Pepe", "Tomato sauce, Mozarella, Chilli flakes, Olives, Basil");
-    const disgustoso = card(disgustosoImg, "Disgustoso", "Tomato sauce, Bacon, Pineapple, Olives, Basil");
-    const colorato = card(coloratoImg, "Colorato", "Tomato sauce, Mozarella, Onion, Pepper, Champignons, Basil");
-    const pomodoro = card(pomodoroImg, "Pomodoro", "Tomato sauce, Mozarella, Tomato, Onion, Feta cheese, Chilli");
-    const crema = card(cremaImg, "Crema", "White sauce, Mozarella, Shrimps, Salmon, Pineapple, Olives, Basil");
-    const carne = card(carneImg, "carne", "Tomato sauce, Mozarella, Homemade sausage, Bacon, Garlic, Pepper, Chilli");
-
-    const menuList = document.createElement("div");
-    menuList.classList.add("menu-list");
-    menuList.appendChild(salsiccia);
-    menuList.appendChild(gamberi);
-    menuList.appendChild(pepe);
-    menuList.appendChild(disgustoso);
-    menuList.appendChild(colorato);
-    menuList.appendChild(pomodoro);
-    menuList.appendChild(crema);
-    menuList.appendChild(carne);
-
-    return menuList;
-}
 function ContactSection() {
     const divEl = createHtmlElement("div", "");
     divEl.classList.add("contact-section");
