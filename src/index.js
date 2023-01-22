@@ -1,42 +1,13 @@
 import _ from 'lodash';
 import './style.css';
-import locationIm from "./images/restaurant-location.png";
-import salsicciaImg from "./images/pizza-types/salsiccia.png";
-import gamberiImg from "./images/pizza-types/gamberi.png";
-import pepeImg from "./images/pizza-types/pepe.png";
-import disgustosoImg from "./images/pizza-types/disgustoso.png";
-import coloratoImg from "./images/pizza-types/colorato.png";
-import pomodoroImg from "./images/pizza-types/pomodoro.png";
-import cremaImg from "./images/pizza-types/crema.png";
-import carneImg from "./images/pizza-types/carne.png";
 
 import { Header, createHtmlElement } from './header.js';
 import { HeroSection } from './hero.js';
 import { Footer } from './footer.js';
 import { MenuSection } from './menu.js';
-
-
-
-function ContactSection() {
-    const divEl = createHtmlElement("div", "");
-    divEl.classList.add("contact-section");
-    const mobileNumber = createHtmlElement("p", "📞 123 456 789")
-    mobileNumber.classList.add("mobile-number");
-    const address = createHtmlElement("p", "🏠 Hollywood Boulevard 42, Los Angeles, USA")
-    address.classList.add("address")
-    const locationImg = createHtmlElement("img", "");
-    locationImg.src = locationIm;
-    locationImg.classList.add("location-img")
-
-    divEl.appendChild(mobileNumber);
-    divEl.appendChild(address);
-    divEl.appendChild(locationImg);
-
-    return divEl;
-}
+import { ContactSection } from './contact.js';
 
 // Render page content based on page
-
 
 const contentEl = document.getElementById("content");
 contentEl.appendChild(Header());
